@@ -40,7 +40,6 @@ width: 100px;
     cursor: pointer;
 }
 .profit-loss{
-    color: green;
     width: 120px;
 }
 
@@ -53,4 +52,11 @@ width: 100px;
   }
   .hovered{
     background-color: #dddddd;
+  }
+  .green{
+
+    color: green;
+  }
+  .red{
+    color: red;
   }

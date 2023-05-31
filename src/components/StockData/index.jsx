@@ -6,6 +6,7 @@ import { AiOutlineHeart, AiFillHeart } from "react-icons/ai";
 const StockData = () => {
   const [displaySelected, setDisplaySelected] = useState(false);
   const [hoveredItemId, setHoveredItemId] = useState(null);
+
   const selectedProducts = useSelector((state) =>
     state.Stocks.products.filter((item) => item.isSelected)
   );
@@ -54,6 +55,8 @@ const StockData = () => {
       {/* main Component */}
       {productList?.map((val) => {
         const isHovered = hoveredItemId === val.id;
+        const isPositiveChange = parseFloat(val.stockValueChange) > 0;
+        const isNegativeChange = parseFloat(val.stockValueChange) < 0;
         return (
           <div
             key={val.id}
@@ -76,7 +79,13 @@ const StockData = () => {
               </div>
               <div>
                 <div className="price"> ₹{val.stockPrice}</div>
-                <div className="profit-loss">{val.stockValueChange}</div>
+                <div
+                  className={`profit-loss ${isPositiveChange ? "green" : ""} ${
+                    isNegativeChange ? "red" : ""
+                  }`}
+                >
+                  {val.stockValueChange}
+                </div>
               </div>
             </div>
           </div>
