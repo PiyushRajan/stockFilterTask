@@ -1,0 +1,56 @@
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.navbar-wrapper{
+display: flex;
+justify-content: space-evenly;
+}
+.wrapper{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    width: 600px;
+    margin-left: 410px;
+
+}
+.left-wrapper{
+    display: flex;
+    width: 600px;
+    justify-content: space-between;
+    align-items: center;
+}
+.right-wrapper{
+
+}
+.company-name{
+width: 100px;
+}
+.category{
+    background-color: #dddddd;
+    width:35px;
+}
+.navbar-wrapper{
+    display: flex;
+}
+.navtag{
+    font-weight: 900;
+    cursor: pointer;
+}
+.profit-loss{
+    color: green;
+    width: 120px;
+}
+
+.navtag.active {
+    color: blue;
+    border-bottom: 2px solid blue;
+  }
+  .icon-wrapper{
+    border: 1px solid black;
+  }
+  .hovered{
+    background-color: #dddddd;
+  }
